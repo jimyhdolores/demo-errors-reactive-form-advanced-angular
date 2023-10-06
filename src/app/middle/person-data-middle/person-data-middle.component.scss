@@ -1,0 +1,11 @@
+.field {
+	border-color: #673ab7;
+	border-radius: 7px;
+	&__title {
+		color: #673ab7;
+	}
+}
+.insured {
+	display: flex;
+	gap: 1em;
+}

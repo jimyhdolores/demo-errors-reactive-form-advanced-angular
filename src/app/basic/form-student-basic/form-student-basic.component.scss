@@ -1,0 +1,37 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	.student {
+		display: flex;
+		align-items: baseline;
+		gap: 1em;
+		&__name {
+			font-size: 16px;
+			color: #673ab7;
+			font-weight: 500;
+		}
+	}
+
+	.register-form {
+		.questions {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+		}
+		.field {
+			border-color: #673ab7;
+			border-radius: 7px;
+			&__title {
+				color: #673ab7;
+			}
+		}
+		.insured {
+			display: flex;
+			gap: 1em;
+		}
+	}
+}

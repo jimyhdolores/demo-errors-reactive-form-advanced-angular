@@ -1,0 +1,15 @@
+<fieldset class="field" [formGroupName]="controlKey">
+	<legend class="field__title">{{ title }}</legend>
+
+	<section class="insured">
+		<mat-form-field appearance="outline">
+			<mat-label>Nombres</mat-label>
+			<input matInput formControlName="names" />
+		</mat-form-field>
+
+		<mat-form-field appearance="outline">
+			<mat-label>Apellidos</mat-label>
+			<input matInput formControlName="lastName" />
+		</mat-form-field>
+	</section>
+</fieldset>

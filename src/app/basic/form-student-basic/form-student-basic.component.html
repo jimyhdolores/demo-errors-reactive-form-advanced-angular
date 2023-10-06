@@ -1,0 +1,78 @@
+<div class="container">
+	<mat-card>
+		<mat-card-content>
+			<section class="student">
+				<h2>Alumno:</h2>
+				<span class="student__name">Messi Ronaldo</span>
+			</section>
+
+			<form class="register-form" [formGroup]="formGroup" (ngSubmit)="saveData()">
+				<section class="questions">
+					<mat-slide-toggle formControlName="doYouPayAttentionToClasses"
+						>Presta atención a las clases?</mat-slide-toggle
+					>
+					<mat-slide-toggle formControlName="doYouSubmitYourAssignmentsOnTime"
+						>Presenta sus tareas a tiempo?</mat-slide-toggle
+					>
+					<mat-slide-toggle formControlName="missingClasses">Falta a clases?</mat-slide-toggle>
+				</section>
+				<br />
+
+				<h3>Observaciones:</h3>
+				<mat-form-field appearance="outline" subscriptSizing="dynamic">
+					<mat-label>Observaciones</mat-label>
+					<input matInput formControlName="observations" />
+					<mat-error *ngIf="observationsField.hasError('required')">
+						El ingreso de la observacion es obligatorio
+					</mat-error>
+				</mat-form-field>
+
+				<h3>Datos de los padres</h3>
+				<fieldset class="field">
+					<legend class="field__title">Datos del padre:</legend>
+
+					<section class="insured" formGroupName="dataFather">
+						<mat-form-field appearance="outline">
+							<mat-label>Nombres</mat-label>
+							<input matInput formControlName="names" />
+							<mat-error *ngIf="dataFatherField.controls.names.hasError('required')"> Ingrese el nombre </mat-error>
+						</mat-form-field>
+
+						<mat-form-field appearance="outline">
+							<mat-label>Apellidos</mat-label>
+							<input matInput formControlName="lastName" />
+							<mat-error *ngIf="dataFatherField.controls.lastName.hasError('required')">
+								Ingrese el Apellido
+							</mat-error>
+						</mat-form-field>
+					</section>
+				</fieldset>
+
+				<br />
+
+				<fieldset class="field" formGroupName="dataMother">
+					<legend class="field__title">Datos de la madre:</legend>
+
+					<section class="insured">
+						<mat-form-field appearance="outline">
+							<mat-label>Nombres</mat-label>
+							<input matInput formControlName="names" />
+							<mat-error *ngIf="dataMotherField.controls.names.hasError('required')"> Ingrese el nombre </mat-error>
+						</mat-form-field>
+
+						<mat-form-field appearance="outline">
+							<mat-label>Apellidos</mat-label>
+							<input matInput formControlName="lastName" />
+							<mat-error *ngIf="dataMotherField.controls.lastName.hasError('required')">
+								Ingrese el Apellido
+							</mat-error>
+						</mat-form-field>
+					</section>
+				</fieldset>
+
+				<br />
+				<button mat-raised-button color="primary">Guardar</button>
+			</form>
+		</mat-card-content>
+	</mat-card>
+</div>
