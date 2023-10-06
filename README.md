@@ -8,7 +8,7 @@ Hola Coders, en esta oportunidad aprenderemos a usar las directivas para poder m
 
 **LINK DEL VIDEO DONDE EXPLICAMOS EL CODIGO** 😎
 
-🔗 [Errors Reactive Forms, el poder de las directivas🤯](https://youtu.be/AWWq1DHsHfI)
+🔗 [Errors Reactive Forms, el poder de las directivas🤯](https://youtu.be/ALhaqz32WpM)
 
 **Sígueme en mis redes:**
 

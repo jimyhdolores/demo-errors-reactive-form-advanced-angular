@@ -10,7 +10,6 @@ import { FormSubmitDirective } from './form-submit.directive';
 	standalone: true
 })
 export class ControlErrorsDirective implements OnInit, OnDestroy {
-	//observations -> FormControl
 	private readonly ngControl = inject(NgControl);
 	private readonly form = inject(FormSubmitDirective, { optional: true });
 	private readonly destroy$ = new Subject<void>();
